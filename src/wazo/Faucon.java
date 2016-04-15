@@ -1,10 +1,19 @@
 package wazo;
 
 public class Faucon extends Oiseau{
-
-	public Faucon(String nom, String couleur, int envergure) {
-		super(nom, couleur, envergure);
-		// TODO Auto-generated constructor stub
+	/*** METHODES ***/
+	// CONSTRUCTEURS
+	public Faucon(){
+		this.nourriture = new Carnivore();
+		this.deplacement = new Voler();
 	}
+	public Faucon(String nom, String couleur, int envergure,
+			Nourriture nourriture, Deplacement deplacement) {
+		super(nom, couleur, envergure, nourriture, deplacement);
+	}
+
+
+
+
 
 }
