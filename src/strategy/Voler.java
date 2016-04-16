@@ -1,4 +1,4 @@
-package wazo;
+package strategy;
 
 public class Voler implements Deplacement{
 	public void seDeplacer(){

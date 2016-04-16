@@ -1,4 +1,4 @@
-package wazo;
+package strategy;
 
 public class Omnivore implements Nourriture{
 	public void seNourrir(){

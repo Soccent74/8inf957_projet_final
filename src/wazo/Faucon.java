@@ -1,5 +1,10 @@
 package wazo;
 
+import strategy.Carnivore;
+import strategy.Deplacement;
+import strategy.Nourriture;
+import strategy.Voler;
+
 public class Faucon extends Oiseau{
 	/*** METHODES ***/
 	// CONSTRUCTEURS

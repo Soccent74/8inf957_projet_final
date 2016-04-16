@@ -1,4 +1,4 @@
-package wazo;
+package strategy;
 
 public class Carnivore implements Nourriture{
 	public void seNourrir(){

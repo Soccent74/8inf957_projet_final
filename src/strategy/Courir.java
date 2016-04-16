@@ -1,4 +1,4 @@
-package wazo;
+package strategy;
 
 public class Courir implements Deplacement{
 	public void seDeplacer(){

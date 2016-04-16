@@ -1,5 +1,10 @@
 package wazo;
 
+import strategy.Deplacement;
+import strategy.Marcher;
+import strategy.Nourriture;
+import strategy.Omnivore;
+
 public class Pigeon extends Oiseau{
 	/*** METHODES ***/
 	// CONSTRUCTEURS

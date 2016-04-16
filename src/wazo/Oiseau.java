@@ -1,13 +1,18 @@
 package wazo;
 
+import strategy.Deplacement;
+import strategy.Marcher;
+import strategy.Nourriture;
+import strategy.Omnivore;
+
 public class Oiseau {
 	/*** VARIABLES ***/
 	private int envergure = 0;
 	private String nom = "";
 	private String couleur = "";
 	// COMPORTEMENT PAR DEFAUT
-	protected Nourriture nourriture = new Omnivore();
-	protected Deplacement deplacement = new Marcher();
+	//public Nourriture nourriture = new Omnivore();
+	//public Deplacement deplacement = new Marcher();
 	
 	
 	/*** METHODES ***/
@@ -18,8 +23,8 @@ public class Oiseau {
 		this.envergure = envergure;
 		this.nom = nom;
 		this.couleur = couleur;
-		this.nourriture = nourriture;
-		this.deplacement = deplacement;
+		//this.nourriture = nourriture;
+		//this.deplacement = deplacement;
 	}
 	// GETTERS
 	public int getEnvergure(){return envergure;}
@@ -29,14 +34,14 @@ public class Oiseau {
 	public void setEnvergure(int envergure){this.envergure = envergure;}
 	public void setNom(String nom){this.nom = nom;}
 	public void setCouleur(String couleur){this.couleur = couleur;}
-	public void setDeplacement(Deplacement deplacement){this.deplacement = deplacement;}
-	public void setNutrition(Nourriture nourriture){this.nourriture = nourriture;}
+	//public void setDeplacement(Deplacement deplacement){this.deplacement = deplacement;}
+	//public void setNutrition(Nourriture nourriture){this.nourriture = nourriture;}
 	
-	public void Deplacement(){
+	/*public void Deplacement(){
 		deplacement.seDeplacer();
 	}
 	public void Nutrition(){
 		nourriture.seNourrir();
-	}
+	}*/
 	
 }

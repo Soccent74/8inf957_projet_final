@@ -1,5 +1,10 @@
 package wazo;
 
+import strategy.Courir;
+import strategy.Deplacement;
+import strategy.Herbivore;
+import strategy.Nourriture;
+
 public class Autruche extends Oiseau{
 	/*** METHODES ***/
 	// CONSTRUCTEURS

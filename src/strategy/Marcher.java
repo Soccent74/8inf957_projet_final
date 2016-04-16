@@ -1,4 +1,4 @@
-package wazo;
+package strategy;
 
 public class Marcher implements Deplacement{
 	public void seDeplacer(){
