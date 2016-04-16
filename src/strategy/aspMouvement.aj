@@ -1,28 +1,31 @@
 package strategy;
 
-import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
+import wazo.Oiseau;
 
-public abstract aspect aspMouvement 
-{
-   Hashtable deplacementPerOiseau = new Hashtable( );
+privileged aspect aspMouvement pertarget ( target(Oiseau) && call (void Oiseau.Deplacement())) {
+	private int Oiseau.Deplacement = 0;
+		
+	public wazo.Oiseau.new(String couleur, int envergure, int nourriture, int deplacement){
+		this.envergure = envergure;
+		this.couleur = couleur;
+		this.Alimentation = nourriture;
+		this.deplacement = deplacement;
+	}
+	
 
-   protected interface Deplacement
-   {
-   }
-
-   protected interface Oiseau
-   {
-   }
-
-   private Deplacement Oiseau.Deplacement = null;
-
-   public void setConcreteDeplacement(Oiseau c, Deplacement s)
-   {
-	   deplacementPerOiseau.put(c, s);
-   }
-
-   public Deplacement getConcreteDeplacement(Deplacement c)
-   {
-      return (Deplacement) deplacementPerOiseau.get(c);
-   }
+	void around (Oiseau o) : target (o) && execution (void Oiseau.Nutrition()) {
+		
+		switch (o.Alimentation) {
+			case 1: // perfectionnement à exécuter pour la stratégie 1
+					System.out.println("Je suis herbivore.");
+				break;
+			
+			case 2: // perfectionnement à exécuter pour la stratégie 2
+				System.out.println("Je suis carnivore. grrrrrrr");
+				break;
+			
+			default: System.out.println("Je suis omnivore.");; // exécution de la stratégie par défaut
+				
+		}
+	}
 }

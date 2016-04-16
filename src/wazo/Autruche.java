@@ -3,18 +3,19 @@ package wazo;
 import strategy.Courir;
 import strategy.Deplacement;
 import strategy.Herbivore;
+import strategy.Marcher;
 import strategy.Nourriture;
 
 public class Autruche extends Oiseau{
+	
 	/*** METHODES ***/
 	// CONSTRUCTEURS
 	public Autruche(){
-		this.nourriture = new Herbivore();
-		this.deplacement = new Courir();
+		super("marron", 2, 0, new Marcher());
 	}
-	public Autruche(String nom, String couleur, int envergure,
-			Nourriture nourriture, Deplacement deplacement) {
-		super(nom, couleur, envergure, nourriture, deplacement);
+	public Autruche(String couleur, int envergure,
+			int nourriture, Deplacement deplacement) {
+		super(couleur, envergure, 0, deplacement);
 	}
 
 	

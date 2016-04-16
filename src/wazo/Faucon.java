@@ -2,6 +2,7 @@ package wazo;
 
 import strategy.Carnivore;
 import strategy.Deplacement;
+import strategy.Marcher;
 import strategy.Nourriture;
 import strategy.Voler;
 
@@ -9,12 +10,11 @@ public class Faucon extends Oiseau{
 	/*** METHODES ***/
 	// CONSTRUCTEURS
 	public Faucon(){
-		this.nourriture = new Carnivore();
-		this.deplacement = new Voler();
+		super("marron", 2, 2, new Marcher());
 	}
-	public Faucon(String nom, String couleur, int envergure,
-			Nourriture nourriture, Deplacement deplacement) {
-		super(nom, couleur, envergure, nourriture, deplacement);
+	public Faucon(String couleur, int envergure,
+			int nourriture, Deplacement deplacement) {
+		super(couleur, envergure, 2, deplacement);
 	}
 
 
